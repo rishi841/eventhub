@@ -20,6 +20,9 @@ const PORT=process.env.PORT||5000
 
 app.use("/api/auth", UserRoute)
 app.use("/api/events",EventRoutes)
+app.get("/health", (req, res) => {
+  res.status(200).send("OK");
+});
 
 app.listen(PORT,()=>{
    console.log(`server is running on port ${PORT}`)
