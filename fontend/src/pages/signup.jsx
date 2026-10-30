@@ -19,7 +19,7 @@ function Signup() {
     setSubmitting(true);
 
     try {
-      await api.post("/auth/signup", { Name: name, email, password });
+      await api.post("/auth/register", { Name: name, email, password });
       toast.success("Account created! Please login.");
       navigate("/login");
     } catch (err) {

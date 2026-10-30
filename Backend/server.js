@@ -22,5 +22,5 @@ app.use("/api/auth", UserRoute)
 app.use("/api/events",EventRoutes)
 
 app.listen(PORT,()=>{
-    console.log("server is running on port 3000")
+   console.log(`server is running on port ${PORT}`)
 })
